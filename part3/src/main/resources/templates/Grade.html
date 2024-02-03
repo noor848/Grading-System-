@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade List</title>
+</head>
+<body>
+<h1>Your Grades</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Grade</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="grade : ${grades}">
+        <td >[[${grade.id}]]</td>
+        <td>[[${grade.grade}]]</td>
+    </tr>
+    </tbody>
+</table>
+<a href="/">logout</a>
+
+</body>
+</html>
